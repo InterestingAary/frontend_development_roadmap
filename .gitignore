@@ -1,0 +1,31 @@
+# Dependencies & Build Output
+node_modules/
+dist/
+build/
+.next/
+out/
+.vite/
+
+# Environment and Local Config
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
