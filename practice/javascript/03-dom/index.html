@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM To-do Practice</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; }
+      .error { color: #b00020; }
+      .done { text-decoration: line-through; color: #666; }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Practice: To-do List</h1>
+
+    <form id="todoForm">
+      <label for="taskInput">Task</label>
+      <input id="taskInput" name="task" type="text" placeholder="Enter a task" />
+      <button type="submit">Add task</button>
+      <p id="formError" class="error"></p>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>

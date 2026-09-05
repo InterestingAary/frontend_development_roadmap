@@ -1,23 +1,31 @@
-function WelcomeCard({ name, role }) {
+const learners = [
+  { id: 1, name: "Aary", focus: "JavaScript" },
+  { id: 2, name: "Sam", focus: "React" },
+];
+
+function LearnerCard({ name, focus, isActive }) {
   return (
-    <div style={{ border: "1px solid #ddd", padding: "12px", marginBottom: "8px" }}>
-      <h3>{name}</h3>
-      <p>{role}</p>
-    </div>
+    <article style={{ border: "1px solid #ddd", padding: "12px", marginBottom: "8px" }}>
+      <h2>{name}</h2>
+      <p>Current focus: {focus}</p>
+      {/* Conditional rendering: UI changes based on props. */}
+      <p>Status: {isActive ? "Active learner" : "Taking a break"}</p>
+    </article>
   );
 }
 
 export default function App() {
-  const learners = [
-    { id: 1, name: "Aary", role: "JavaScript Learner" },
-    { id: 2, name: "Sam", role: "React Beginner" },
-  ];
-
   return (
     <main>
-      <h1>React Components + Props</h1>
+      <h1>React Basics: Components, JSX, Props, Lists</h1>
+      {/* Keys help React track each list item between renders. */}
       {learners.map((learner) => (
-        <WelcomeCard key={learner.id} name={learner.name} role={learner.role} />
+        <LearnerCard
+          key={learner.id}
+          name={learner.name}
+          focus={learner.focus}
+          isActive={learner.id === 1}
+        />
       ))}
     </main>
   );
